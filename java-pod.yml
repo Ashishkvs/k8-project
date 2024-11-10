@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: java-application
+  labels:
+    app: user-app
+spec:
+  containers:
+  - name: user-api
+    image: apiuser:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 7777
